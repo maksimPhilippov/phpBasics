@@ -2,7 +2,12 @@
 include('header.php');
 ?>
 <?php
-echo "hello, " . $_SESSION['username'];
+if(isset($_SESSION['logined'])) {
+    echo "hello, " . $_SESSION['username'];
+}
+else {
+    echo "unlogined";
+}
 ?>
 <?php
 include('footer.php');
