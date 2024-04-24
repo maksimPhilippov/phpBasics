@@ -43,5 +43,20 @@ draw_section("arrays_practise");
 ?>
 
 <?php
+function dates_practise() {
+    echo "<h2>Dates practise</h2>";
+
+    $date = date("Y-m-d");
+    echo "Today is " . $date . "<br>";
+    $time = date("h:i:sa");
+    echo "Server time is " . $time . "<br>";
+    $time = date("Y-m-d H:i:s", mktime(14, 1, 15, 6, 22, 2007));
+    echo "Time created is " . $time . "<br>";
+
+}
+draw_section("dates_practise");
+?>
+
+<?php
 include('footer.php');
 ?>
