@@ -23,6 +23,31 @@ footer {
     width: fit-content;
     padding: 0.5em 1em;
 }
+
+.fruit {
+    margin: .5rem;
+    padding: .5rem;
+
+    border-radius: 1rem;
+    background-color: lightgreen;
+    width: fit-content;
+}
+
+.fruit>.speech {
+    padding: .5rem;
+    display: block;
+
+    background-color: white;
+    border-radius: 1rem;
+    font-style: normal;
+}
+
+.scaler-large {
+    font-size: 1.5em;
+}
+.scaler-small {
+    font-size: 0.7em;
+}
     </style>
 </head>
 <body>
