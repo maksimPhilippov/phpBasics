@@ -1,7 +1,6 @@
 <?php
 include('header.php');
-?>
-<?php
+
 if (rand(0, 1)) {
     echo "win <br>";
 }
@@ -21,9 +20,6 @@ function draw_section($drawer) {
     echo "</section>";
 }
 
-?>
-
-<?php
 function arrays_practise() {
 
     $coins = array("bitcoin", "dogcoin", "crazycoin", "tothemooncoin");
@@ -44,10 +40,7 @@ function arrays_practise() {
     print_r($coins);
     echo "<br>";
 }
-draw_section("arrays_practise");
-?>
 
-<?php
 function dates_practise() {
 
     $date = date("Y-m-d");
@@ -58,9 +51,21 @@ function dates_practise() {
     echo "Time created is " . $time . "<br>";
 
 }
-draw_section("dates_practise");
-?>
 
-<?php
+function cookies_practise() {
+    $cookie_name = "level";
+    if(isset($_COOKIE[$cookie_name])) {
+        echo "Your level is {$_COOKIE[$cookie_name]}<br>";
+    }
+    else {
+        echo "You haven't cookie named \"{$cookie_name}\" <br>";
+    }
+    echo "<a href=\"cookies.php\">I want some cookies</a><br>";
+}
+
+draw_section("arrays_practise");
+draw_section("dates_practise");
+draw_section("cookies_practise");
+
 include('footer.php');
 ?>
