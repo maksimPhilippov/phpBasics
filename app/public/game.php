@@ -10,7 +10,13 @@ else {
 }
 
 function draw_section($drawer) {
+    
+    $title = strtolower($drawer);
+    $title = str_replace("_", " ", $title);
+    $title[0] = strtoupper($title[0]);
+    
     echo "<section>";
+    echo "<h2>$title</h2>";
     $drawer();
     echo "</section>";
 }
@@ -19,7 +25,6 @@ function draw_section($drawer) {
 
 <?php
 function arrays_practise() {
-    echo "<h2>Arrays practise</h2>";
 
     $coins = array("bitcoin", "dogcoin", "crazycoin", "tothemooncoin");
     foreach($coins as $coin) {
@@ -44,7 +49,6 @@ draw_section("arrays_practise");
 
 <?php
 function dates_practise() {
-    echo "<h2>Dates practise</h2>";
 
     $date = date("Y-m-d");
     echo "Today is " . $date . "<br>";
